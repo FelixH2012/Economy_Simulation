@@ -1,13 +1,23 @@
 package de.felix
 
+import de.felix.date.IncrementDate
 import de.felix.date.Month
 import de.felix.date.Year
 
 fun main(args: Array<String>) {
 
 
-    val year = Year(2021)
+    val date = IncrementDate(4)
 
-    println("Days in month: ${year.daysInMonth(Month.FEBRUARY)}")
+    for (i in 0..<100) {
+        println(date.getDate())
+        date.increment()
+    }
 
+    date.setSpeed(2)
+
+    for (i in 0..<100) {
+        println(date.getDate())
+        date.increment()
+    }
 }

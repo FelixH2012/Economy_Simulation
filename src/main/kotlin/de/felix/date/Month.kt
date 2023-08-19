@@ -1,6 +1,6 @@
 package de.felix.date
 
-enum class Month(val month: String, val index : Int, val days: Int, val leapYearDays: Int) {
+enum class Month(val month: String, val index : Int, private val days: Int, private val leapYearDays: Int) {
     JANUARY("January", 1, 31, 31),
     FEBRUARY("February", 2, 28, 29),
     MARCH("March", 3, 31, 31),
